@@ -44,7 +44,7 @@ app.post("/login", function (req, res) {
     var user = req.body;
 
     if (!user || !user.username || !user.password) {
-        // TODO missing parameters, return a 422
+        res.status(422).send();
     }
 
     var usernameMatch = _.find(users, function (u) {
@@ -52,11 +52,10 @@ app.post("/login", function (req, res) {
     });
 
     if (!usernameMatch || usernameMatch.password !== user.password) {
-        // TODO invalid credentials, return a 401
+        res.status(401).send();
     } else {
         authenticatedUser = _.omit(usernameMatch, 'password');
-        // TODO success, return a 200 and the authenticatedUser object
-
+        res.json(authenticatedUser);
     }
 });
 
