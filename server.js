@@ -14,7 +14,7 @@ var users = [
         username: "mario",
         password: "mario",
         name: "Mario",
-        games: [{ title: "Super Mario Bros. 3", beat: false }, { title: "Super Mario 64", beat: true }, { title: "Super Smash Bros. Melee", beat: false }]
+        games: [{ title: "Super Mario Bros. 3", beat: false }, { title: "Super Mario 64", beat: true }, { title: "Super Smash Bros. Melee", beat: true }]
     },
     {
         username: "luigi",

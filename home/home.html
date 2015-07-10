@@ -9,6 +9,7 @@
             For each game, conditionally add a class of 'beat' based on the value the game's beat property
             On click of the li, call home.changeGameStatus() in home.js
         -->
+          <li data-ng-repeat="game in home.user.games" data-ng-click="home.changeGameStatus(game)" data-ng-class="{'beat': game.beat}">{{game.title}}</li>
     </ul>
 
     <input type="text" class="form-control" data-ng-model="home.newGame.title" placeholder="Game Title">

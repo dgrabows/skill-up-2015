@@ -27,10 +27,13 @@ skillup.controller("HomeCtrl", ["$scope", "$http", function ($scope, $http) {
          * Complete the logout function
          */
 
-        // TODO Perform an HTTP call to "/logout"
-        //   What's the HTTP method? the resource exists on the server
-
-        // TODO In the success callback, redirect to user to "#/login"
+        // Perform an HTTP call to "/logout"
+        $http.post("/logout").then(function(res){
+            // In the success callback, redirect user to "#/login"
+            window.location.href = "#/login";
+        }, function(res){
+            alert("Unable to logout");
+        });
     };
 
     home.changeGameStatus = function(game){
