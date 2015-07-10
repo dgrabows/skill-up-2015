@@ -24,6 +24,7 @@
         "body-parser": "^1.13.2",
         "grunt": "^0.4.5",
         "grunt-contrib-less": "*",
-        "grunt-contrib-watch": "*"
+        "grunt-contrib-watch": "*",
+        "moment": "2.10.3"
     }
 }

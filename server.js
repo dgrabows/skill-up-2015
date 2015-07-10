@@ -2,6 +2,7 @@ var port = 8080;
 var express = require('express');
 var bodyParser = require("body-parser");
 var _ = require('lodash');
+var moment = require('moment');
 
 var app = express();
 
@@ -30,7 +31,10 @@ var authenticatedUser;
  * Create a resource for /heartbeat to test Express
  */
 
-// TODO heartbeat function goes here
+app.get("/heartbeat", function (req, res) {
+    // res.status(200).send({"heartbeat": "beat", "time": moment()});
+    res.json({"heartbeat": "beat", "time": moment()});
+});
 
 app.post("/login", function (req, res) {
     /**
